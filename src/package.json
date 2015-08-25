@@ -1,0 +1,15 @@
+{
+  "name": "docklog-src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.4.2",
+    "bunyan": "^1.4.0",
+    "elasticsearch": "^6.1.0",
+    "elasticsearch-streams": "0.0.9",
+    "event-stream": "^3.3.1"
+  }
+}
