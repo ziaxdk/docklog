@@ -9,7 +9,8 @@ var fs = require('fs'),
     WritableBulk = require('elasticsearch-streams').WritableBulk,
     TransformToBulk = require('elasticsearch-streams').TransformToBulk,
 
-    CheckHost = require('./checkHost');
+    CheckHost = require('./checkHost'),
+    HttpServer = require('http-server');
 
 var importPath = process.env.DOCKLOG_PATH || '../import';
 var esUri =  process.env.ESURI || 'http://192.168.99.100:9200';
