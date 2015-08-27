@@ -8,9 +8,11 @@
   "dependencies": {
     "async": "^1.4.2",
     "bunyan": "^1.4.0",
+    "chokidar": "^1.0.5",
     "elasticsearch": "^6.1.0",
     "elasticsearch-streams": "0.0.9",
     "event-stream": "^3.3.1",
-    "http-server": "^0.8.0"
+    "http-server": "^0.8.0",
+    "simplequeue": "0.0.4"
   }
 }

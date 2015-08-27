@@ -15,5 +15,8 @@ COPY ./src ziax
 WORKDIR ziax
 RUN npm install
 
+# ENTRYPOINT ["/docker-entrypoint.sh"]
+# CMD ["elasticsearch"]
+
 VOLUME ["/opt/docklog"]
 EXPOSE 9200 9300 9400
