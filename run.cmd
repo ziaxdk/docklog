@@ -1,0 +1,1 @@
+docker run -d --name docklog -p 9200:9200 -v //c/Users/keo/Desktop/docklog/import2:/opt/docklog docklog

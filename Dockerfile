@@ -12,14 +12,20 @@ RUN tar -xzf "node-v$NODE_VERSION-linux-x64.tar.gz" -C /usr/local --strip-compon
   && npm install -g npm@"$NPM_VERSION" \
   && npm cache clear
 
+# RUN npm install -g pm2
+
 COPY ./src ziax
 COPY ./docker-entrypoint.sh /
 
 WORKDIR ziax
 RUN npm install
+RUN npm install -g pm2
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["elasticsearch"]
+CMD ["run"]
 
 VOLUME ["/opt/docklog"]
 EXPOSE 9200 9300
+
+# docker build -t docklog .
+# docker run -d --name docklog -p 9200:9200 -v //c/Users/keo/Desktop/docklog/import2:/opt/docklog docklog
