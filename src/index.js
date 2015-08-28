@@ -18,7 +18,7 @@ var webPort =  process.env.WEBPORT || 9400;
 
 log.info('starting application');
 
-async.series([ persister.start, startWebServer, startProducer, startConsumer ]);
+async.series([ persister.start, /*startWebServer,*/ startProducer, startConsumer ]);
 
 function startProducer(cb) {
   var watcherProcess = child_process.fork('watcher.js', [ importPath ]);
